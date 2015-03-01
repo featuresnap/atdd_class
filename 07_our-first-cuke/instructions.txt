@@ -1,0 +1,5 @@
+As a first exercise with Cucumber, implement the Making Cheese scenario in the provided feature file.
+
+Implement each step using the "puts" instruction to display an appropriate message.
+
+Note there is no actual assertion in these steps, so Cucumber will show them as passing once they are no longer "pending".
