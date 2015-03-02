@@ -6,7 +6,6 @@ def adopt_puppy_number(puppy_number, browser)
   browser.button(:value => 'Adopt Me!').click
 end
 
-
 browser=Watir::Browser.new
 browser.goto 'http://puppies.herokuapp.com'
 adopt_puppy_number(1, browser)
@@ -21,3 +20,5 @@ browser.select_list(:id => 'order_pay_type').select 'Check'
 browser.button(:value => 'Place Order').click
 
 fail 'Something went wrong adopting a puppy' unless browser.text.include? 'Thank you for adopting a puppy!' 
+
+browser.close

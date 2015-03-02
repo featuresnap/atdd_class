@@ -1,0 +1,26 @@
+Refine the script for adopting two puppies to make it DRY (Don't Repeat Yourself) and then
+DAMP (using Descriptive And Meaningful Phrases).
+
+1. Extract Method:
+
+To remove our most obvious source of duplication, make a method to adopt a puppy given its number.
+The name of the method might be "adopt_puppy_number". Call this method from the main script.
+
+2. Introduce Variable:
+
+The adopt_puppy_number method does not have access to the "browser" local variable. Fix that by introducing
+an instance variable @browser.
+
+3. Descriptive and Meaningful Phrases:
+
+Although the rest of the actions are not duplicated, the steps of adopting two puppies still do not read very
+descriptively. By making well named methods for each operation, we can develop a small "domain-specific language" 
+so that the script reads very closely to the way you actually think about the tasks involved in adopting puppies. 
+
+ - go to the puppy adoption site
+ - adopt puppy #1
+ - continue adopting puppies
+ - adopt puppy #2
+ - checkout
+ - verify puppy adoption succeeded
+ - close the browser
