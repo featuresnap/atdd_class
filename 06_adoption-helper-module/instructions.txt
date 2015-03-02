@@ -1,0 +1,3 @@
+Adoption Helper Module
+
+Revise the scripts for adopting a single puppy and adopting two puppies to use a Ruby module. 
