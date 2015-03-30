@@ -12,6 +12,10 @@ And(/^I complete the adoption$/) do
   @browser.button(:value => 'Complete the Adoption').click
 end
 
+And(/^I adopt another puppy$/) do
+  @browser.button(:value => 'Adopt Another Puppy').click
+end
+
 And(/^I enter the name "([^"]*)"$/) do |name|
   @browser.text_field(:id => 'order_name').value = name
 end
@@ -36,8 +40,3 @@ end
 Then(/^I should see the message "([^"]*)"$/) do |expected_message|
   expect(@browser.text).to include expected_message
 end
-
-And(/^I adopt another puppy$/) do
-  @browser.button(:value => 'Adopt Another Puppy').click
-end
-

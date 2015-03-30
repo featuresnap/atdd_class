@@ -5,8 +5,7 @@ Feature: Adopt A Puppy
 
 Scenario: Adopt One Puppy
   Given I am looking for a puppy to adopt
-  And I view the details of puppy 1
-  And I adopt the puppy
+  And I adopt puppy 1
   And I complete the adoption
   And I enter the name "Jim Bob"
   And I enter the address "123 Main Street\nCleveland, OH 44113"
