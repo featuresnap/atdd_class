@@ -1,5 +1,5 @@
-Begin with an empty project:
+Begin with the scenario for adopting one puppy with Cucumber. 
 
-	testgen project <project> --pageobject-driver=watir
- 
-Adopt a puppy using Cucumber step definitions. Complete the adoption and verify the adoption succeeded.  
+Now create a scenario which will adopt the first and second puppies in the list using Cucumber step definitions. 
+
+Complete the adoption and verify the adoption succeeded.  
