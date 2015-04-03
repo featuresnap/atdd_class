@@ -1,0 +1,4 @@
+Given two scenarios for making different kinds of cheese.
+
+Convert the two scenarios to use a scenario outline
+ with examples of each cheese type to make. 
