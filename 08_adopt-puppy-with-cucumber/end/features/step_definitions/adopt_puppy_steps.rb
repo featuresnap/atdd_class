@@ -34,5 +34,5 @@ When(/^I place my order$/) do
 end
 
 Then(/^I should see the message "([^"]*)"$/) do |expected_message|
-  expect(@browser.text).to include expected_message
+  fail unless @browser.text.include? expected_message
 end
