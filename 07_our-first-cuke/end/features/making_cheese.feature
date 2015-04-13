@@ -1,10 +1,10 @@
 Feature: Making Cheese
 
-  As a cheese maker
+  As a cheese lover
   I want to make cheese
-  So I can share my cheesiness
+  So I can make everyone happy
 
   Scenario: Using the cheese machine
     Given I have no cheese
     When I press the make cheese button
-    Then I should have 1 piece of cheese
+    Then I expect to have cheese
