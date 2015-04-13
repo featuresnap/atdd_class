@@ -1,4 +1,12 @@
-Given two scenarios for making different kinds of cheese.
+1. Write a scenario which adds one puppy to the shopping cart and verifies the shopping cart correctly displays:
+  - The puppy's name
+  - The price for the puppy 
+  - The cart total
 
-Convert the two scenarios to use a scenario outline
- with examples of each cheese type to make. 
+2. Write a scenario which adds two puppies to the shopping cart and verifies the shopping cart correctly displays:
+  - Both puppies' names
+  - The prices for each puppy
+  - The cart total 
+
+Note: Price for the puppy is the price next to the puppy's name.
+Note: Do not worry about optional accessories for this exercise.
