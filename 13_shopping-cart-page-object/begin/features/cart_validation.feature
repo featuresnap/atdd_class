@@ -3,7 +3,6 @@ Feature: Shopping Cart Validation
   I want to confirm the details of my order before I check out
   So that I do not overspend or order a puppy I did not mean to
 
-
   Scenario: Validate cart with one puppy
     Given I am looking for a puppy to adopt
     When I adopt puppy 1
