@@ -1,0 +1,17 @@
+Adopt a puppy: Create a Ruby script which will adopt a puppy.
+
+Major tasks:
+1. Go to puppy adoption site
+2. View the details of a puppy by clicking the View Details button
+	browser.button(:value => 'View Details').click()
+3. Add puppy to cart by clicking the Adopt Me! button
+4. Enter checkout process by clicking the Complete the Adoption button
+5. Enter checkout information:
+
+	ELEMENT IDENTIFIED BY:				ENTER DATA BY:
+
+	browser.text_field(:id => 'order_name')	        .set(...)
+	browser.textarea(:id => 'order_address')	.set(...)
+	browser.text_field(:id => 'order_email')	.set(...)
+	browser.select_list(:id => 'order_pay_type')	.select(...)
+6. Click the Place Order button
