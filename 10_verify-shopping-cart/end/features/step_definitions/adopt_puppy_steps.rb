@@ -8,10 +8,6 @@ And(/^I adopt puppy (\d+)$/) do |puppy_number|
   @browser.button(:value => 'Adopt Me!').click
 end
 
-And(/^I complete the adoption$/) do
-  @browser.button(:value => 'Complete the Adoption').click
-end
-
 And(/^I adopt another puppy$/) do
   @browser.button(:value => 'Adopt Another Puppy').click
 end

@@ -12,6 +12,3 @@ And(/^I adopt another puppy$/) do
   @browser.button(:value => 'Adopt Another Puppy').click
 end
 
-Then(/^I should see the message "([^"]*)"$/) do |expected_message|
-  expect(@browser.text).to include expected_message
-end
