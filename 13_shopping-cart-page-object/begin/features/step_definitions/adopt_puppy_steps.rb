@@ -25,8 +25,7 @@ Then(/^I should see "([^"]*)" as the subtotal for line item (\d+)$/) do |expecte
 end
 
 Then(/^I should see "([^"]*)" as the total for the cart$/) do |expected_total|
-  #Ruby trick: Array index [-1] points to the last item in the array, which in our table gives us the last row
-  total_cell = @browser.table(:index => 0)[-1][2]
+  total_cell = @browser.td(:class => 'total_cell')
   expect(total_cell.text).to eql expected_total
 end
 
