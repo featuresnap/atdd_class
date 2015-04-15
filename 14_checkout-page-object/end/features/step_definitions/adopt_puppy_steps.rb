@@ -11,6 +11,7 @@ end
 
 And(/^I complete the adoption$/) do
   @shopping_cart_page.proceed_to_checkout
+  @checkout_page=CheckoutPage.new(@browser)
 end
 
 And(/^I adopt another puppy$/) do
@@ -18,20 +19,19 @@ And(/^I adopt another puppy$/) do
 end
 
 And(/^I enter the name "([^"]*)"$/) do |name|
-  @browser.text_field(:id => 'order_name').value = name
+  @checkout_page.customer_name = name
 end
 
 And(/^I enter the address "([^"]*)"$/) do |address|
-  puts address
-  @browser.textarea(:id => 'order_address').value = address
+  @checkout_page.address = address
 end
 
 And(/^I enter the contact email "([^"]*)"$/) do |email|
-  @browser.text_field(:id => 'order_email').value = email
+  @checkout_page.email = email
 end
 
 And(/^I enter "([^"]*)" as the payment type$/) do |payment_method|
-  @browser.select(:id => 'order_pay_type').select(payment_method)
+  @checkout_page.payment_method = payment_method
 end
 
 When(/^I place my order$/) do
