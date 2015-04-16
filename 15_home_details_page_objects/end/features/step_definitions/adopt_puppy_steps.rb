@@ -28,10 +28,6 @@ And(/^I checkout with:$/) do |checkout_data_table|
   @checkout_page.place_order
 end
 
-Then(/^I should see the message "([^"]*)"$/) do |expected_message|
-  expect(@browser.text).to include expected_message
-end
-
 Then(/^I should see "([^"]*)" as the name for line item (\d+)$/) do |expected_name, line_item|
   expect(@shopping_cart_page.name_for_line line_item.to_i).to include expected_name
 end
