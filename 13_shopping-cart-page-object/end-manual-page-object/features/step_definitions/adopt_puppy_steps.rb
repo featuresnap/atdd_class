@@ -17,24 +17,12 @@ And(/^I adopt another puppy$/) do
   @shopping_cart_page.continue_shopping
 end
 
-And(/^I enter the name "([^"]*)"$/) do |name|
-  @browser.text_field(:id => 'order_name').value = name
-end
-
-And(/^I enter the address "([^"]*)"$/) do |address|
-  puts address
-  @browser.textarea(:id => 'order_address').value = address
-end
-
-And(/^I enter the contact email "([^"]*)"$/) do |email|
-  @browser.text_field(:id => 'order_email').value = email
-end
-
-And(/^I enter "([^"]*)" as the payment type$/) do |payment_method|
-  @browser.select(:id => 'order_pay_type').select(payment_method)
-end
-
-When(/^I place my order$/) do
+And(/^I checkout with:$/) do |checkout_data_table|
+  checkout_data = checkout_data_table.hashes.first
+  @browser.text_field(:id => 'order_name').set(checkout_data["name"])
+  @browser.textarea(:id => 'order_address').set(checkout_data["address"])
+  @browser.text_field(:id => 'order_email').set(checkout_data["email"])
+  @browser.select(:id => 'order_pay_type').select(checkout_data["payment type"])
   @browser.button(:value => 'Place Order').click
 end
 
