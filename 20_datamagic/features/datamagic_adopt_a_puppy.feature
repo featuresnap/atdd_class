@@ -3,9 +3,10 @@ Feature: Supplying data
   As a adoption agency fulfillment agent
   I want to ensure the adopter provides all necessary information
 
+  Background:
+    Given I am shopping for puppies
 
   Scenario: Example using default data
-    Given I am shopping for puppies
     When I view the puppy "Brook"
     And I click the adopt me button
     And I click the complete adoption button
@@ -13,7 +14,6 @@ Feature: Supplying data
     Then I should see "Thank you for adopting a puppy"
 
   Scenario: Example using overriding default data
-    Given I am shopping for puppies
     When I view the puppy "Brook"
     And I click the adopt me button
     And I click the complete adoption button
