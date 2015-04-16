@@ -1,0 +1,1 @@
+Convert the pages to use page factories based on the PageObject gem.
