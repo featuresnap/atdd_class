@@ -1,24 +1,15 @@
-Feature: Supplying data
-  In order to have enough information to complete a puppy adoption
-  As a adoption agency fulfillment agent
+Feature: Validating correct checkout values
+  In order to have fulfill a requested puppy adoption
+  As an adoption agency fulfillment agent
   I want to ensure the adopter provides all necessary information
 
-  Background:
-    Given I am shopping for puppies
-
   Scenario: Example using default data
+    Given I am shopping for puppies
     When I view the puppy "Brook"
     And I click the adopt me button
     And I click the complete adoption button
-    And I checkout
-    Then I should see "Thank you for adopting a puppy"
-
-  Scenario: Example using overriding default data
-    When I view the puppy "Brook"
-    And I click the adopt me button
-    And I click the complete adoption button
-    And I checkout using a purchase order
-    Then I should see "Thank you for adopting a puppy"
+    And I checkout with the name blank
+    Then I should see "Name can't be blank"
 
 
 
