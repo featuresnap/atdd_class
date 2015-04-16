@@ -1,11 +1,12 @@
 Given(/^I am looking for a puppy to adopt$/) do
   @browser.goto 'http://puppies.herokuapp.com'
+  @home_page = HomePage.new(@browser)
 end
 
 And(/^I adopt puppy (\d+)$/) do |puppy_number|
-  index = (puppy_number.to_i)-1
-  @browser.button(:value => 'View Details', :index => index).click
-  @browser.button(:value => 'Adopt Me!').click
+  @home_page.view_details_for_puppy(puppy_number.to_i)
+  @details_page = DetailsPage.new(@browser)
+  @details_page.adopt_me
   @shopping_cart_page=ShoppingCartPage.new(@browser)
 end
 
@@ -44,3 +45,6 @@ Then(/^I should see "([^"]*)" as the total for the cart$/) do |expected_total|
 end
 
 
+Then(/^I should be informed the adoption was successful$/) do
+  expect(@home_page.adoption_completed).to be true
+end

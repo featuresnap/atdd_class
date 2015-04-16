@@ -1,0 +1,1 @@
+Convert the Home page and the Details page to use page objects based on the PageObject gem.

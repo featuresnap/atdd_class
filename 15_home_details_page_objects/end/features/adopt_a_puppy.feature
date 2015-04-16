@@ -13,6 +13,7 @@ Feature: Adopt A Puppy
       | name      | address      | email        | payment type |
       | Pat Kelly | 123 Main St. | pat@atdd.com | Check        |
     Then I should see the message "Thank you for adopting a puppy!"
+    Then I should be informed the adoption was successful
 
   Scenario: Adopt Two Puppies
     When I adopt puppy 1
