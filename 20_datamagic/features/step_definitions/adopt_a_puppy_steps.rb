@@ -7,7 +7,7 @@ When(/^I checkout$/) do
 end
 
 When(/^I checkout using a purchase order$/) do
-  on(OrderPage).checkout({'pay_type' => 'Purchase order'})
+  on(OrderPage).checkout({:pay_type => 'Purchase order'})
 end
 
 When(/^I view the puppy "([^"]*)"$/) do |puppy_name|
