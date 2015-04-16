@@ -12,9 +12,9 @@ Feature: Shopping Cart Validation
 
   Scenario: Validate cart with two puppies
     Given I am looking for a puppy to adopt
-    And I adopt puppy 1
+    When I adopt puppy 1
     And I adopt another puppy
-    When I adopt puppy 2
+    And I adopt puppy 2
     Then I should see "Brook" as the name for line item 1
     And I should see "$34.95" as the subtotal for line item 1
     And I should see "Hanna" as the name for line item 2
