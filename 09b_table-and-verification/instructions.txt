@@ -1,0 +1,2 @@
+Use a Cucumber table to improve the readability of the puppy adoption scenarios. The table can be used to consolidate
+several steps of the checkout process into a single step (e.g. "And I checkout with:") that uses a table.
