@@ -1,7 +1,7 @@
-Feature: Supplying data
-  In order to have enough information to complete a puppy adoption
+Feature: Checkout with default data
+  In order to checkout without specifying made up data
   As a adoption agency fulfillment agent
-  I want to ensure the adopter provides all necessary information
+  I want to ensure the checkout works with default data
 
   Background:
     Given I am shopping for puppies
