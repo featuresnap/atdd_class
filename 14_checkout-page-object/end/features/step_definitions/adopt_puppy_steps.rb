@@ -18,24 +18,13 @@ And(/^I adopt another puppy$/) do
   @shopping_cart_page.continue_shopping
 end
 
-And(/^I enter the name "([^"]*)"$/) do |name|
-  @checkout_page.customer_name = name
-end
-
-And(/^I enter the address "([^"]*)"$/) do |address|
-  @checkout_page.address = address
-end
-
-And(/^I enter the contact email "([^"]*)"$/) do |email|
-  @checkout_page.email = email
-end
-
-And(/^I enter "([^"]*)" as the payment type$/) do |payment_method|
-  @checkout_page.payment_method = payment_method
-end
-
-When(/^I place my order$/) do
-  @browser.button(:value => 'Place Order').click
+And(/^I checkout with:$/) do |checkout_data_table|
+  checkout_data = checkout_data_table.hashes.first
+  @checkout_page.customer_name = checkout_data["name"]
+  @checkout_page.address = checkout_data["address"]
+  @checkout_page.email = checkout_data["email"]
+  @checkout_page.payment_method = checkout_data["payment type"]
+  @checkout_page.place_order
 end
 
 Then(/^I should see the message "([^"]*)"$/) do |expected_message|
