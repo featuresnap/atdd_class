@@ -16,27 +16,6 @@ And(/^I adopt another puppy$/) do
   @browser.button(:value => 'Adopt Another Puppy').click
 end
 
-And(/^I enter the name "([^"]*)"$/) do |name|
-  @browser.text_field(:id => 'order_name').value = name
-end
-
-And(/^I enter the address "([^"]*)"$/) do |address|
-  puts address
-  @browser.textarea(:id => 'order_address').value = address
-end
-
-And(/^I enter the contact email "([^"]*)"$/) do |email|
-  @browser.text_field(:id => 'order_email').value = email
-end
-
-And(/^I enter "([^"]*)" as the payment type$/) do |payment_method|
-  @browser.select(:id => 'order_pay_type').select(payment_method)
-end
-
-When(/^I place my order$/) do
-  @browser.button(:value => 'Place Order').click
-end
-
 Then(/^I should see the message "([^"]*)"$/) do |expected_message|
   expect(@browser.text).to include expected_message
 end
